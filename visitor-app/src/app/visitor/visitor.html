@@ -1,0 +1,60 @@
+<div class="container">
+  <h2 class="title">Visitor Entry</h2>
+  <div class="form-box glass-container">
+
+    <input type="text" [(ngModel)]="visitor.name"
+      (input)="validateName()" placeholder="Name">
+    <div class="error" *ngIf="errors.name">{{ errors.name }}</div>
+
+    <input type="tel" maxlength="10" [(ngModel)]="visitor.phone"
+      (input)="validatePhone()" placeholder="Phone">
+    <div class="error" *ngIf="errors.phone">{{ errors.phone }}</div>
+
+    <input type="text" [(ngModel)]="visitor.purpose"
+      (input)="validatePurpose()" placeholder="Purpose">
+    <div class="error" *ngIf="errors.purpose">{{ errors.purpose }}</div>
+
+    <input type="text" [(ngModel)]="visitor.meet"
+      (input)="validateMeet()" placeholder="Meet Person">
+    <div class="error" *ngIf="errors.meet">{{ errors.meet }}</div>
+ 
+    <input type="text" [(ngModel)]="visitor.location"
+      (input)="validateLocation()" placeholder="From Location">
+    <div class="error" *ngIf="errors.location">{{ errors.location }}</div>
+
+    <input type="text" [(ngModel)]="visitor.company"
+      (input)="validateCompany()" placeholder="From Company">
+    <div class="error" *ngIf="errors.company">{{ errors.company }}</div>
+
+    <button (click)="addVisitor()">Add Visitor</button>
+  </div>
+
+  <table *ngIf="visitors.length > 0" class="glass-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Purpose</th>
+        <th>Meet</th>
+        <th>Location</th>   
+        <th>Company</th>    
+        <th>In Time</th>
+        <th>Out Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of visitors; let i = index">
+        <td>{{v.name}}</td>
+        <td>{{v.phone}}</td>
+        <td>{{v.purpose}}</td>
+        <td>{{v.meet}}</td>
+        <td>{{v.location}}</td>   
+        <td>{{v.company}}</td>   
+        <td>{{v.inTime}}</td>
+        <td>{{v.outTime || '-'}}</td>
+        <td><button (click)="markOut(i)">Out</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,129 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://4kwallpapers.com/images/walls/thumbs_3t/5381.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+ 
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+ 
+.title {
+  color: white;
+  margin-bottom: 12px;        
+  font-size: 22px;           
+  font-weight: bold;
+}
+ 
+.glass-container {
+  backdrop-filter: blur(8px);               
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.08);   
+  border-radius: 12px;
+
+  padding: 15px 20px;         
+  width: 260px;              
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+input {
+  width: 100%;
+  padding: 7px 10px;          
+  margin: 5px 0;             
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 12px;           
+  outline: none;
+  box-sizing: border-box;
+}
+ 
+input::placeholder {
+  color: #ddd;
+  font-size: 12px;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.3);
+}
+ 
+button {
+  width: 100%;
+  padding: 8px;             
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: bold;
+  font-size: 13px;           
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.glass-table {
+  margin-top: 20px;
+  width: 90%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  font-size: 13px;            
+}
+
+.glass-table th {
+  padding: 8px 10px;          
+  background: rgba(0,0,0,0.3);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.glass-table td {
+  padding: 7px 10px;         
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.glass-table button {
+  width: auto;
+  padding: 4px 12px;
+  font-size: 12px;
+  margin-top: 0;
+}
+ 
+.delete {
+  background: #ff4d4d;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: #cc0000;
+}
+ 
+.error {
+  color: #ff6b6b;
+  font-size: 11px;            
+  text-align: left;
+  margin-top: -3px;
+  margin-bottom: 4px;
+}
